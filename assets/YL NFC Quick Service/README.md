@@ -41,6 +41,7 @@
 | 包名 | `com.ylstudio.nfcfast` |
 | 版本 | `1.0.2_00014_2026.09.05_Beta` |
 | 开发商 | 影联工作室 |
+| 解压密码 | `ylgzs` |
 
 ### ⚠️ 注意事项
 
@@ -93,6 +94,7 @@ Bug 反馈请前往：https://ylgzs.top
 | Package | `com.ylstudio.nfcfast` |
 | Version | `1.0.2_00014_2026.09.05_Beta` |
 | Developer | Yinglian Studio |
+| Extraction Password | `ylgzs` |
 
 ### ⚠️ Notes
 
