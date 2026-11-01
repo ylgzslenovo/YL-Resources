@@ -1,5 +1,5 @@
 name: 提交作品 / Submit Work
-description: 向影联工作室提交你的 APK、工具或研发成果（必须包含官网与联系方式）。
+description: 向影联工作室提交你的 APK、工具或研发成果（必须包含官网与联系方式）
 title: "[提交] "
 labels: ["submission", "pending-review"]
 assignees: []
@@ -8,8 +8,8 @@ body:
     attributes:
       value: |
         ## 🐉 影联工作室 · 作品提交 (YL Studio Submission)
-        欢迎提交您的作品。为了保证上架应用的安全性与生态纯净，请务必完整填写以下信息。
-        任何隐瞒权限、提供虚假联系方式或包含恶意代码的提交，将被永久拉黑。
+        欢迎提交您的作品 为了保证上架应用的安全性与生态纯净，请务必完整填写以下信息
+        任何隐瞒权限、提供虚假联系方式或包含恶意代码的提交，将被永久拉黑
 
   - type: input
     id: work-name
@@ -32,7 +32,7 @@ body:
     id: contact-info
     attributes:
       label: 联系方式
-      description: 请提供至少一种有效联系方式（邮箱 / Telegram / QQ）
+      description: 请提供至少一种有效联系方式（邮箱 / Telegram / QQ / 微信）
       placeholder: 邮箱或社交账号
     validations:
       required: true
@@ -51,6 +51,9 @@ body:
       label: 目标运行环境 (API)
       description: 该应用设计运行的最低 Android 版本
       options:
+        - Android 4.0 以下 (API 13及以下)
+        - Android 4.0 - 4.3 (API 14-18)
+        - Android 4.4 - 7.1 (API 19-25)
         - Android 8.0 - 10 (API 26-29)
         - Android 11 - 12 (API 30-31)
         - Android 13 - 14 (API 33-34)
@@ -75,18 +78,29 @@ body:
     id: high-risk-permissions
     attributes:
       label: 申请的高危权限声明 (如有遗漏将被驳回)
+      description: 请勾选所有申请的高危权限（支持多选）
       options:
         - label: 无障碍服务 (Accessibility)
         - label: 设备管理器 (Device Admin)
         - label: Root / 底层 Shell 权限
         - label: 悬浮窗与后台常驻自启
+        - label: 其他
         - label: 无任何高危权限
+
+  - type: input
+    id: other-permissions-desc
+    attributes:
+      label: 其他权限说明 (若上方勾选了“其他”则必填，否则请填“无”)
+      description: 只有在你上方勾选了“其他”时，才需要在这里填写具体权限内容（多个权限请用空格隔开）
+      placeholder: 例如：读取通知栏 读取通讯录（若未勾选“其他”请填：无）
+    validations:
+      required: true
 
   - type: input
     id: sha256
     attributes:
       label: 文件 SHA-256 校验值
-      description: 请提供上传附件的哈希值，以确保文件在传输中未被篡改。
+      description: 请提供上传附件的哈希值，以确保文件在传输中未被篡改
       placeholder: 例如：a1b2c3d4...
     validations:
       required: true
@@ -95,7 +109,7 @@ body:
     id: source-code
     attributes:
       label: 开源许可与源码链接
-      description: 若闭源请填“闭源免费”；若开源，请粘贴 GitHub 等源码仓库地址。
+      description: 若闭源请填“闭源免费”；若开源，请粘贴 GitHub 等源码仓库地址
       placeholder: https://github.com/... 或 闭源
     validations:
       required: true
@@ -104,8 +118,8 @@ body:
     id: testing-env
     attributes:
       label: 测试设备与环境说明
-      description: 请说明你在什么机型、什么底包下测试通过。
-      placeholder: 例如：Redmi Note 9 Pro, 定制 Android 12 底包, 未解BL, 容器内运行。
+      description: 请说明你在什么机型、什么底包下测试通过
+      placeholder: 例如：Redmi Note 9 Pro, 定制 Android 12 底包, 未解BL, 容器内运行
     validations:
       required: true
 
@@ -114,16 +128,16 @@ body:
       value: |
         ---
         💡 **开发者福利提示：没有自己的官网怎么办？**
-        如果您目前没有真实域名或个人信息主页，强烈建议去注册一个免费的二级域名及免费主机。
-        这里推荐使用 **ByetHost**。国内直连访问速度极佳，且免费提供完整的 **PHP / MySQL 数据库** 环境。
-         *(注意：管理后台或提交时，请务必关闭 VPN 直连访问，否则会触发主机 WAF 导致连接断开。)*
+        如果您目前没有真实域名或个人信息主页，强烈建议去注册一个免费的二级域名及免费主机
+        这里推荐使用 **ByetHost** 国内直连访问速度极佳，且免费提供完整的 **PHP / MySQL 数据库** 环境
+         *(注意：管理后台或提交时，请务必关闭 VPN 直连访问，否则会触发主机 WAF 导致连接断开)*
 
   - type: checkboxes
     id: legal-agreement
     attributes:
       label: 法律与开源协议保证
       options:
-        - label: 我声明此作品不包含任何窃取隐私、静默下载、后门或恶意扣费代码。如经查实，自愿承担一切法律责任。
+        - label: 我声明此作品不包含任何窃取隐私、静默下载、后门或恶意扣费代码 如经查实，自愿承担一切法律责任
           required: true
-        - label: 我同意该作品按照 YL-Resources 的 LICENSE 协议（含免责声明与署名要求）进行分发与收录。
+        - label: 我同意该作品按照 YL-Resources 的 LICENSE 协议（含免责声明与署名要求）进行分发与收录
           required: true
