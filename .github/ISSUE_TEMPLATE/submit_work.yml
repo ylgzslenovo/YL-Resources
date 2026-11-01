@@ -19,6 +19,19 @@ body:
     validations:
       required: true
 
+  # ==========================================
+  # 新增的文件上传引导区域
+  # ==========================================
+  - type: input
+    id: upload-apk-tip
+    attributes:
+      label: 上传您的APK（请在下方输入框随意填写，再点击最下方的Add Files上传压缩包，注意：不是APK，是zip压缩包）
+      description: 由于 GitHub 限制，请务必将 .apk 打包成 .zip 压缩包。在此框填“见下方附件”或“无”，然后滑到最底部留言框，点击“Add Files”上传。
+      placeholder: 见下方附件 / 无
+    validations:
+      required: true
+  # ==========================================
+
   - type: input
     id: developer-site
     attributes:
@@ -126,6 +139,10 @@ body:
   - type: markdown
     attributes:
       value: |
+        ---
+        ⚠️ **重要提醒：文件上传区**
+        请勿直接上传 `.apk` 文件！请将文件打包为 **`.zip`** 压缩包，然后在下方评论框点击 **`Add Files`** 按钮上传。直接传 APK 会触发 GitHub 系统拦截报错！
+        
         ---
         💡 **开发者福利提示：没有自己的官网怎么办？**
         如果您目前没有真实域名或个人信息主页，强烈建议去注册一个免费的二级域名及免费主机
