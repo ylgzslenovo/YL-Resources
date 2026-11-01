@@ -20,13 +20,13 @@ body:
       required: true
 
   # ==========================================
-  # 新增的文件上传引导区域
+  # 保留的提示信息，并改成多行输入框
   # ==========================================
-  - type: input
+  - type: textarea
     id: upload-apk-tip
     attributes:
       label: 上传您的APK（请在下方输入框随意填写，再点击最下方的Add Files上传压缩包，注意：不是APK，是zip压缩包）
-      description: 由于 GitHub 限制，请务必将 .apk 打包成 .zip 压缩包。在此框填“见下方附件”或“无”，然后滑到最底部留言框，点击“Add Files”上传。
+      description: 在此框填“见下方附件”或“无”即可，然后滑到最底部留言框，点击“Add Files”选择您的压缩包。
       placeholder: 见下方附件 / 无
     validations:
       required: true
@@ -135,19 +135,6 @@ body:
       placeholder: 例如：Redmi Note 9 Pro, 定制 Android 12 底包, 未解BL, 容器内运行
     validations:
       required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        ⚠️ **重要提醒：文件上传区**
-        请勿直接上传 `.apk` 文件！请将文件打包为 **`.zip`** 压缩包，然后在下方评论框点击 **`Add Files`** 按钮上传。直接传 APK 会触发 GitHub 系统拦截报错！
-        
-        ---
-        💡 **开发者福利提示：没有自己的官网怎么办？**
-        如果您目前没有真实域名或个人信息主页，强烈建议去注册一个免费的二级域名及免费主机
-        这里推荐使用 **ByetHost** 国内直连访问速度极佳，且免费提供完整的 **PHP / MySQL 数据库** 环境
-         *(注意：管理后台或提交时，请务必关闭 VPN 直连访问，否则会触发主机 WAF 导致连接断开)*
 
   - type: checkboxes
     id: legal-agreement
