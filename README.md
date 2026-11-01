@@ -13,7 +13,7 @@
 
 资料与自制工具合集，允许有限使用；任何使用及网络分发都必须附上本说明和原作者署名。
 
-## 提交记录 / Commit History
+## 提交记录
 
 ![Commits](https://img.shields.io/github/commit-activity/t/ylgzslenovo/YL-Resources)
 ![Last Commit](https://img.shields.io/github/last-commit/ylgzslenovo/YL-Resources)
