@@ -25,8 +25,8 @@ body:
   - type: textarea
     id: upload-apk-tip
     attributes:
-      label: 上传您的APK（请在下方输入框随意填写，再点击最下方的Add Files上传压缩包，注意：不是APK，是zip压缩包）
-      description: 在此框填“见下方附件”或“无”即可，然后滑到最底部留言框，点击“Add Files”选择您的压缩包。
+      label: 上传您的APK（请在下方输入框随意填写，再点击下方的Add Files上传压缩包，注意：不是APK，是zip压缩包）
+      description: 在此框填“见下方附件”或“无”即可，然后点击下方“Add Files”选择您的压缩包
       placeholder: 见下方附件 / 无
     validations:
       required: true
