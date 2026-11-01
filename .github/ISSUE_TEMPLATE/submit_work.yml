@@ -36,7 +36,7 @@ body:
     id: developer-site
     attributes:
       label: 个人官网 / 开发者主页链接
-      description: 必须提供可正常访问的域名，用于验证开发者真实性（如果没有，请看页面最下方的免费域名申请提示）
+      description: 必须提供可正常访问的域名，用于验证开发者真实性（可填无，必须有联系方式，如果没有域名，请看页面最下方的免费域名申请提示）
       placeholder: https://
     validations:
       required: true
