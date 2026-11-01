@@ -7,8 +7,7 @@
 - 站点：https://ylresources.html-5.me/
 - GitHub：https://github.com/ylgzslenovo/YL-Resources
 
-> ⚠️ 访问时请不要开启 VPN，否则会遇到“主机关闭了您的连接（ERR_CONNECTION_CLOSED）”。
-> ⚠️ Please do not use a VPN when visiting; otherwise you may encounter "The host closed the connection (ERR_CONNECTION_CLOSED)".
+> ⚠️ 访问时请不要开启 VPN，否则会遇到“主机关闭了您的连接（ERR_CONNECTION_CLOSED）”
 
 ## 使用声明
 
